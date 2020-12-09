@@ -17,9 +17,11 @@ class Button extends Component
     public $type;
     public $id;
     public $class;
+    public $color;
 
-    public function __construct($text = false, $name = false, $attrs = false, $type = 'button', $id = false, $class = 'btn-primary')
+    public function __construct($text = false, $name = false, $attrs = false, $type = 'button', $id = false, $class = false, $color = 'primary')
     {
+        $this->color = 'btn-'.$color;
         $this->text = $text;
         $this->name = $name;
         $this->attrs = $attrs;

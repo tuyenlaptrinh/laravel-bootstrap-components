@@ -22,8 +22,9 @@ class Text extends Component
     public $place;
     public $rootClass;
     public $only;
+    public $required;
 
-    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $type = false, $place = false, $rootClass = false, $only = false)
+    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $type = false, $place = false, $rootClass = false, $only = false, $required = false)
     {
         $this->rootClass = $rootClass;
         $this->place = $place;
@@ -44,6 +45,7 @@ class Text extends Component
         $this->attrs = $attrs;
         $this->help = $help;
         $this->only = $only;
+        $this->required = $required;
     }
 
     /**

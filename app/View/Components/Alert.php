@@ -16,9 +16,11 @@ class Alert extends Component
     public $content;
     public $close;
     public $attrs;
+    public $type;
 
-    public function __construct($class = 'alert-warning', $id = false, $content = '', $close = false, $attrs = false)
+    public function __construct($class = false, $id = false, $content = '', $close = false, $attrs = false, $type = 'success')
     {
+        $this->type = $type ? 'alert-'.$type: false;
         $this->class = $class;
         $this->id = $id ? $id : uniqid();
         $this->content = $content;

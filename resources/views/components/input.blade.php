@@ -4,7 +4,7 @@
     @if($label && !$only)
         <label for="{!! $id !!}" class="form-label">{!! $label !!}</label>
     @endif
-    <input{!! $attrs ? ' '.$attrs:'' !!} name="{!! $name ? $name : '' !!}" value="{!! $value ? $value :'' !!}" type="{!! $type !!}" class="form-control{!! $class ? ' '.$class:'' !!}" id="{!! $id !!}" placeholder="{!! $place ? $place :'' !!}">
+    <input{!! $required ? ' required':'' !!}{!! $attrs ? ' '.$attrs:'' !!} name="{!! $name ? $name : '' !!}" value="{!! $value ? $value :'' !!}" type="{!! $type !!}" class="form-control{!! $class ? ' '.$class:'' !!}" id="{!! $id !!}" placeholder="{!! $place ? $place :'' !!}">
     @if($help && !$only)
         <small class="form-text text-muted">{!! $help !!}</small>
     @endif
