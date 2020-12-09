@@ -6,7 +6,7 @@
         @endif
         <textarea{!! $required ? ' required':'' !!}{!! $attrs ? ' '.$attrs:'' !!} name="{!! $name ? $name : '' !!}" type="{!! $type !!}" class="form-control{!! $class ? ' '.$class:'' !!}" id="{!! $id !!}" placeholder="{!! $place ? $place :'' !!}">{!! $value ? $value :'' !!}</textarea>
         @if($help && !$only)
-            <small class="form-text text-muted">{!! $help !!}</small>
+            <div class="form-text">{!! $help !!}</div>
         @endif
         @if(!$only)
     </div>

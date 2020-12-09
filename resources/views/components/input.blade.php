@@ -6,7 +6,7 @@
     @endif
     <input{!! $required ? ' required':'' !!}{!! $attrs ? ' '.$attrs:'' !!} name="{!! $name ? $name : '' !!}" value="{!! $value ? $value :'' !!}" type="{!! $type !!}" class="form-control{!! $class ? ' '.$class:'' !!}" id="{!! $id !!}" placeholder="{!! $place ? $place :'' !!}">
     @if($help && !$only)
-        <small class="form-text text-muted">{!! $help !!}</small>
+        <div class="form-text">{!! $help !!}</div>
     @endif
 @if(!$only)
 </div>

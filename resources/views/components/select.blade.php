@@ -5,12 +5,16 @@
     <label for="{!! $id !!}">{!! $label !!}</label>
     @endif
     <select{!! $required ? ' required':'' !!}{!! $attrs ? ' '.$attrs:'' !!} name="{!! $name ? $name: '' !!}" id="{!! $id !!}" class="form-select{!! $class ? ' '.$class:'' !!}"{!! $multi ? ' '.$multi:'' !!}>
-        @foreach($options as $key => $option)
-            <option value="{!! $key !!}"{!! $key == $value ? ' selected':'' !!}>{!! $option !!}</option>
-        @endforeach
+        @if(isset($options) && is_array($options) && count($options))
+            @foreach($options as $key => $option)
+                <option value="{!! $key !!}"{!! $key == $value ? ' selected':'' !!}>{!! $option !!}</option>
+            @endforeach
+        @else
+            {!! $slot !!}
+        @endif
     </select>
     @if($help && !$only)
-        <small class="form-text text-muted">{!! $help !!}</small>
+        <div class="form-text">{!! $help !!}</div>
     @endif
 @if(!$only)
 </div>
