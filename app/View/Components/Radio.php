@@ -21,9 +21,11 @@ class Radio extends Component
     public $name;
     public $checked;
     public $only;
+    public $data;
 
-    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $checked = false, $rootClass = false, $only = false)
+    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $checked = false, $rootClass = false, $only = false, $data = [])
     {
+        $this->dataattr = $data;
         $this->label = $label;
         $this->rootClass = $rootClass;
         $this->name = $name;

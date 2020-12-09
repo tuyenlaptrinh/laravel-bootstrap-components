@@ -18,14 +18,16 @@ class Button extends Component
     public $id;
     public $class;
     public $color;
+    public $dataattr;
 
-    public function __construct($text = false, $name = false, $attrs = false, $type = 'button', $id = false, $class = false, $color = 'primary')
+    public function __construct($all = [],$text = false, $name = false, $attrs = false, $type = 'button', $id = false, $class = false, $color = 'primary', $data = [])
     {
         $this->color = 'btn-'.$color;
         $this->text = $text;
         $this->name = $name;
         $this->attrs = $attrs;
         $this->type = $type;
+        $this->dataattr = $data;
         $this->id = $id ? $id : uniqid();
         $this->class = $class;
     }

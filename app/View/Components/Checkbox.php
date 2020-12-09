@@ -21,9 +21,10 @@ class Checkbox extends Component
     public $checked;
     public $rootClass;
     public $only;
-
-    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $checked = false, $rootClass = false, $only = false)
+    public $data;
+    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $checked = false, $rootClass = false, $only = false, $data = [])
     {
+        $this->dataattr = $data;
         $this->label = $label;
         $this->name = $name;
         $this->value = $value;

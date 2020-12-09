@@ -23,9 +23,11 @@ class Input extends Component
     public $rootClass;
     public $required;
     public $only;
+    public $data;
 
-    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $type = false, $place = false, $rootClass = false, $only = false, $required = false)
+    public function __construct($label = false,$name = false,$value = false,$class = false,$id = false,$attrs = false,$help = false, $type = false, $place = false, $rootClass = false, $only = false, $required = false, $data = [])
     {
+        $this->dataattr = $data;
         $this->rootClass = $rootClass;
         $this->place = $place;
         if($type){

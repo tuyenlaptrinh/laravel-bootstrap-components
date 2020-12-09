@@ -23,9 +23,11 @@ class Select extends Component
     public $help;
     public $only;
     public $required;
+    public $data;
 
-    public function __construct($name = false, $attrs = false, $class = false, $rootClass = false, $id = false, $options = [], $value = false, $label = false, $multi = false, $help = false, $only = false, $required = false)
+    public function __construct($name = false, $attrs = false, $class = false, $rootClass = false, $id = false, $options = [], $value = false, $label = false, $multi = false, $help = false, $only = false, $required = false, $data = [])
     {
+        $this->dataattr = $data;
         $this->name = $name;
         $this->attrs = $attrs;
         $this->class = $class;
