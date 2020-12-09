@@ -16,7 +16,7 @@ class Modal extends Component
     public $scroll;
     public $class;
     public $id;
-    public $data;
+    public $dataattr;
 
     public function __construct($static = false, $center = false, $scroll = false, $class = false, $id= false, $data = [])
     {
