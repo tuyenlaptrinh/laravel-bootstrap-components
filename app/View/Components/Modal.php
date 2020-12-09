@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class Mstart extends Component
+class Modal extends Component
 {
     /**
      * Create a new component instance.
@@ -33,6 +33,6 @@ class Mstart extends Component
      */
     public function render()
     {
-        return view('components.mstart');
+        return view('components.modal');
     }
 }
